@@ -25,7 +25,7 @@ public class StudentRepoImpl implements StudentRepo {
     public List<Student> getStudentByTeacherId(Long id) {
         Session session = HibernateSessionProvider.getSession();
         session.beginTransaction();
-        Query query=session.createQuery("from Student as s where s.teachid = :id");
+        Query query=session.createQuery("");
         query.setParameter("id", id);
         List<Student> result = (List<Student>) query.list();
         session.beginTransaction().commit();
