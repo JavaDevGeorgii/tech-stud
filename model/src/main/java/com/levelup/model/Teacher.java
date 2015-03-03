@@ -11,16 +11,18 @@ import java.util.List;
 @Table(name = "TEACHER")
 public class Teacher {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="ID")
     private Long id;
+
+    @Column(nullable = false, name = "FIRSNAME")
     private String firstName;
+
+    @Column(nullable = false, name = "LASTNAME")
     private String lastName;
 
 
-    //private List <Student> students;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
     public Long getId() {
         return id;
     }
@@ -29,7 +31,6 @@ public class Teacher {
         this.id = id;
     }
 
-    @Column(nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -38,7 +39,6 @@ public class Teacher {
         this.firstName = firstName;
     }
 
-    @Column(nullable = false)
     public String getLastName() {
         return lastName;
     }

@@ -11,15 +11,21 @@ import javax.persistence.*;
 @Table(name = "STUDENT")
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ID")
     private Long id;
+
+    @Column(nullable = false, name = "FIRSTNAME")
     private String firstName;
+
+    @Column(nullable = false, name = "LASTNAME")
     private String lastName;
+
+    @Column(nullable = false, name = "")
     private long teachId;
 
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column
     public Long getId() {
         return id;
     }
@@ -28,7 +34,6 @@ public class Student {
         this.id = id;
     }
 
-    @Column(nullable = false)
     public String getFirstName() {
         return firstName;
     }
@@ -37,7 +42,6 @@ public class Student {
         this.firstName = firstName;
     }
 
-    @Column(nullable = false)
     public String getLastName() {
         return lastName;
     }
@@ -46,7 +50,6 @@ public class Student {
         this.lastName = lastName;
     }
 
-    @Column(nullable = false)
     public long getTeachId() {
         return teachId;
     }
@@ -54,6 +57,5 @@ public class Student {
     public void setTeachId(long teachId) {
         this.teachId = teachId;
     }
-
 
 }

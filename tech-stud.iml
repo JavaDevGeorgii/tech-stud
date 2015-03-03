@@ -8,11 +8,6 @@
         </descriptors>
       </configuration>
     </facet>
-    <facet type="ejb" name="EJB">
-      <configuration>
-        <ejbRoots />
-      </configuration>
-    </facet>
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
@@ -32,7 +27,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Hibernate Validator-5.0.1" level="project" />
-    <orderEntry type="library" name="ejb-3.2" level="project" />
   </component>
 </module>

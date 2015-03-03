@@ -1,9 +1,9 @@
 package com.levelup.dao.impl.Impl;
 
+import java.util.List;
 import com.levelup.dao.impl.HibernateSessionProvider;
 import com.levelup.dao.impl.TeacherRepo;
 import com.levelup.model.Teacher;
-import com.sun.tools.javac.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
