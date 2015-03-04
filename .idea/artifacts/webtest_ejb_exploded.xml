@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-ejb" name="webtest:ejb exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/webtest_ejb_exploded</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/tech-stud_ejb_exploded</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="tech-stud/ejb/EJB" />
       <element id="module-output" name="tech-stud" />

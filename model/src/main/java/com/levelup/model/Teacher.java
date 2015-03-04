@@ -22,6 +22,10 @@ public class Teacher {
     @Column(nullable = false, name = "LASTNAME")
     private String lastName;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name ="student_id", nullable = false)
+    private Student student;
+
 
     public Long getId() {
         return id;
@@ -35,6 +39,7 @@ public class Teacher {
         return firstName;
     }
 
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -47,17 +52,13 @@ public class Teacher {
         this.lastName = lastName;
     }
 
-    /**@OneToMany(fetch = FetchType.EAGER)
-    public List<Student> getStudents() {
-        return students;
+
+    public Student getStudent() {
+        return student;
     }
 
-    public void setStudents(List<Student> students) {
-        this.students = students;
+    public void setStudent(Student student) {
+        this.student = student;
     }
-
-    */
-
-
 }
 

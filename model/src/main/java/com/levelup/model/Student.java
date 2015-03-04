@@ -22,9 +22,11 @@ public class Student {
     @Column(nullable = false, name = "LASTNAME")
     private String lastName;
 
-    @Column(nullable = false, name = "")
+    @Column(nullable = false, name = "TEACHERS_ID")
     private long teachId;
 
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "teacher")
+    private Teacher teacher;
 
     public Long getId() {
         return id;
